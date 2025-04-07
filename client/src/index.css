@@ -1,0 +1,132 @@
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  font-family: sans-serif;
+}
+
+.calculator-box {
+  border: 1px solid #90e0ef;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 450px;
+  display: flex; /* Added flexbox for centralizing */
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
+}
+
+.calculator-heading,
+.history-title {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #0077b6;
+}
+
+.input-field {
+  width: calc(100% - 22px);
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #0096c7;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+}
+
+.calculate-btn,
+.clear-btn {
+  width: 50%;
+  padding: 12px;
+  background-color: #9370db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  display: block;
+  margin: 10px auto;
+}
+
+.calculate-btn:hover,
+.clear-btn:hover {
+  background-color: #6a5acd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.calculate-btn:active,
+.clear-btn:active {
+  background-color: white;
+  color: #6a5acd;
+  border: 2px solid #6a5acd;
+  box-shadow: none;
+}
+
+.calculate-btn:disabled,
+.clear-btn:disabled {
+  background-color: #e0bbe4;
+  color: #b19cd9;
+  cursor: not-allowed;
+}
+
+.calculate-btn:focus,
+.clear-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(106, 90, 205, 0.4);
+}
+
+.result {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 18px;
+  color: #023e8a;
+}
+
+.history-box {
+  margin-top: 20px;
+  border-top: 1px solid #90e0ef;
+  padding-top: 20px;
+  width: 100%; /* Make history box take full width */
+}
+
+.no-history-text {
+  text-align: center;
+  color: #0077b6;
+}
+
+.history-list {
+  list-style: none;
+  padding: 0;
+  width: 100%; /* Make history list take full width */
+}
+
+.history-item {
+  border-bottom: 1px solid #90e0ef;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.history-item:last-child {
+  border-bottom: none;
+}
+
+.expression {
+  font-weight: bold;
+  margin-right: 5px;
+  color: #03045e;
+}
+
+.timestamp {
+  font-size: 12px;
+  color: #48cae4;
+}
+
+@media (max-width: 768px) {
+  .calculator-box {
+    width: 90%;
+  }
+}
